@@ -14,6 +14,11 @@ variable "resource_arns" {
   type        = map(any)
 }
 
+variable "principal" {
+  description = "Arn of organization or account id to associate"
+  type        = string
+}
+
 variable "tags" {
   description = "A map of tags to add to all resources"
   type        = map(string)

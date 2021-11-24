@@ -10,3 +10,8 @@ resource "aws_ram_resource_association" "this" {
   resource_arn       = each.key
   resource_share_arn = aws_ram_resource_share.this.arn
 }
+
+resource "aws_ram_principal_association" "this" {
+  principal          = var.principal
+  resource_share_arn = aws_ram_resource_share.this.arn
+}
